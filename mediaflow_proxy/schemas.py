@@ -89,6 +89,7 @@ class MPDManifestParams(GenericParams):
     destination: str = Field(..., description="The URL of the MPD manifest.", alias="d")
     key_id: Optional[str] = Field(None, description="The DRM key ID (optional).")
     key: Optional[str] = Field(None, description="The DRM key (optional).")
+    license_url: Optional[str] = Field(None, alias="license_url")
 
 
 class MPDPlaylistParams(GenericParams):
@@ -96,6 +97,7 @@ class MPDPlaylistParams(GenericParams):
     profile_id: str = Field(..., description="The profile ID to generate the playlist for.")
     key_id: Optional[str] = Field(None, description="The DRM key ID (optional).")
     key: Optional[str] = Field(None, description="The DRM key (optional).")
+    license_url: Optional[str] = Field(None, alias="license_url")
 
 
 class MPDSegmentParams(GenericParams):
@@ -104,6 +106,7 @@ class MPDSegmentParams(GenericParams):
     mime_type: str = Field(..., description="The MIME type of the segment.")
     key_id: Optional[str] = Field(None, description="The DRM key ID (optional).")
     key: Optional[str] = Field(None, description="The DRM key (optional).")
+    license_url: Optional[str] = Field(None, alias="license_url")
 
 
 class ExtractorURLParams(GenericParams):
